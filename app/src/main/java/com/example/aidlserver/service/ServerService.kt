@@ -22,7 +22,7 @@ class ServerService : Service() {
         }
 
         override fun getConnectionCount(): Int {
-            return connectionCount
+            return ServerService.connectionCount
         }
 
         override fun setDisplayedValue(packageName: String?, pid: Int, data: String?) {
