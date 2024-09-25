@@ -15,14 +15,13 @@ class ServerService : Service() {
         private var connectionCount: Int = 0
         private const val NOT_SENT = "Not sent!"
     }
-
     private val binder = object : IMyAidlInterface.Stub() {
         override fun getPid(): Int {
             return Process.myPid()
         }
 
         override fun getConnectionCount(): Int {
-            return connectionCount
+            return ServerService.connectionCount
         }
 
         override fun setDisplayedValue(packageName: String?, pid: Int, data: String?) {
@@ -37,7 +36,6 @@ class ServerService : Service() {
                 "AIDL"
             )
         }
-
     }
 
     override fun onBind(intent: Intent?): IBinder? {

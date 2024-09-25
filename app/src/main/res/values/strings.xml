@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IPCServer</string>
+    <string name="app_name">AidlServer</string>
     <string name="last_connected_client_info">Last Connected Client Info</string>
     <string name="no_connected_client">No Connected Client</string>
     <string name="package_name">Package Name</string>
